@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional CSS Selectors</title>
+
+    <style>
+        /* Adjacent Sibling Selector */
+        h2 + p {
+            color: blue;
+        }
+
+        /* Negation Selector */
+        p:not(.special) {
+            font-style: italic;
+        }
+
+        /* Attribute Value Selector */
+        a[href^="https://"] {
+            color: darkgreen;
+        }
+
+        /* Attribute Value Contains Selector */
+        input[type*="text"] {
+            border: 1px solid lightgray;
+        }
+
+        /* First-of-type Selector */
+        div > p:first-of-type {
+            font-weight: bold;
+        }
+
+        /* Last-of-type Selector */
+        div > p:last-of-type {
+            text-decoration: underline;
+        }
+
+        /* Nth-of-type Selector */
+        div > p:nth-of-type(2n) {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <h2>This is Heading Two</h2>
+    <p>This paragraph comes after an h2.</p>
+
+    <h2>Another Heading Two</h2>
+    <p class="special">This is a special paragraph.</p>
+
+    <a href="https://www.example.com">Link to Example</a>
+    <a href="http://www.google.com">Link to Google</a>
+
+    <input type="text" placeholder="Text Input 1">
+    <input type="email" placeholder="Email Input">
+    <input type="text" placeholder="Text Input 2">
+
+    <div>
+        <p>First paragraph in div.</p>
+        <p>Second paragraph in div.</p>
+        <p>Last paragraph in div.</p>
+    </div>
+</body>
+</html>
